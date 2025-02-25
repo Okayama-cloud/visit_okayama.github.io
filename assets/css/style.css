@@ -8,14 +8,20 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Hero Section with Full Background Image */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Hero Section */
 .hero {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('assets/IMG_6962.JPG') no-repeat center center/cover;
+    background: url('assets/images/hero.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
     display: flex;
@@ -25,61 +31,118 @@ body {
 }
 
 .hero h1 {
-    font-size: 3rem;
-    font-weight: 500;
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
     font-size: 1.5rem;
     margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.cta-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1e79b7;
 }
 
 /* Main Content Section */
-.content {
-    padding: 40px;
+.attractions, .experiences {
+    padding: 40px 20px;
     background-color: white;
     text-align: center;
 }
 
-.content h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-.content ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.content ul li {
-    margin-bottom: 15px;
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.card p {
+    padding: 0 15px 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
     font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #3498db;
 }
 
 /* Responsive Layout */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero p {
         font-size: 1.2rem;
     }
 
-    .content h2 {
-        font-size: 1.5rem;
+    .card-container {
+        flex-direction: column;
+        align-items: center;
     }
-
-    .content ul li {
-        font-size: 1rem;
-    }
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 20px;
 }
