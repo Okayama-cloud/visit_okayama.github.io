@@ -5,66 +5,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visit Okayama</title>
     <meta name="description" content="The ultimate travel guide to Okayama, Japan">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            margin: auto;
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .slides {
-            display: none;
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            background-color: #f7f7f7;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Roboto', sans-serif;
+            color: #2c3e50;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin: 40px 0 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #1abc9c;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 20px;
+            font-weight: 600;
+            color: #ecf0f1;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        /* Header */
+        .hero {
+            background-image: url('https://placeimg.com/1600/600/nature'); /* Placeholder for header image */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+        }
+
+        /* Main Section */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .col {
+            width: 30%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .col:hover {
+            transform: translateY(-10px);
+        }
+
+        .col img {
             width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .col h3 {
+            padding: 20px;
+            font-size: 1.5em;
+            background-color: #2980b9;
+            color: white;
+        }
+
+        .col p {
+            padding: 20px;
+            font-size: 1em;
+            color: #7f8c8d;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <h1>🌸 Welcome to Visit Okayama 🌸</h1>
-    <p>Okayama, known as the "Sunny Land," is a region full of stunning nature, historical landmarks, and delicious local cuisine. This website is your ultimate guide to discovering Okayama’s hidden gems and must-visit destinations.</p>
-    
-    <h2>🏡 Top Attractions</h2>
-    <ul>
-        <li><a href="/destinations/okayama-castle">Okayama Castle</a> – The "Crow Castle" with a striking black exterior</li>
-        <li><a href="/destinations/korakuen">Korakuen Garden</a> – One of Japan’s Three Great Gardens</li>
-        <li><a href="/destinations/kurashiki-bikan">Kurashiki Bikan District</a> – A beautifully preserved historical town</li>
-    </ul>
-    
-    <h2>🎉 Unique Experiences</h2>
-    <ul>
-        <li><a href="/experiences/peach-picking">Peach Picking</a> – Taste Okayama’s famous white peaches</li>
-        <li><a href="/experiences/bizen-pottery">Bizen Pottery Workshop</a> – Try making Japan’s traditional Bizen ware</li>
-        <li><a href="/experiences/food-tour">Local Food Tour</a> – Enjoy specialties like Barazushi and Demi-Katsu Don</li>
-    </ul>
-    
-    <h2>📍 Recommended Itineraries</h2>
-    <p><a href="/itineraries/one-day">One-Day Okayama Tour</a> | <a href="/itineraries/two-days">Two-Day Travel Plan</a></p>
-    
-    <h2>📷 Photo Gallery</h2>
-    <div class="slideshow-container">
-        <img class="slides" src="/assets/IMG_7048.jpg" alt="Okayama Image">
-        <img class="slides" src="/assets/IMG_7048.jpg" alt="Okayama Image">
-        <img class="slides" src="/assets/IMG_7048.jpg" alt="Okayama Image">
+
+    <!-- Header Section with Hero Image -->
+    <header class="hero">
+        <h1>Welcome to Visit Okayama</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="/">Home</a>
+        <a href="/destinations/">Destinations</a>
+        <a href="/experiences/">Experiences</a>
+        <a href="/food/">Food</a>
+        <a href="/about/">About Us</a>
+        <a href="/contact/">Contact</a>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <h2>Top Attractions</h2>
+        <div class="row">
+            <div class="col">
+                <img src="https://placeimg.com/600/400/city" alt="Okayama Castle">
+                <h3>Okayama Castle</h3>
+                <p>The "Crow Castle" with a striking black exterior.</p>
+            </div>
+            <div class="col">
+                <img src="https://placeimg.com/600/400/nature" alt="Korakuen Garden">
+                <h3>Korakuen Garden</h3>
+                <p>One of Japan’s Three Great Gardens, known for its beauty and history.</p>
+            </div>
+            <div class="col">
+                <img src="https://placeimg.com/600/400/arch" alt="Kurashiki Bikan District">
+                <h3>Kurashiki Bikan District</h3>
+                <p>A beautifully preserved historical town with canals and traditional buildings.</p>
+            </div>
+        </div>
+
+        <h2>Unique Experiences</h2>
+        <div class="row">
+            <div class="col">
+                <h3>Peach Picking</h3>
+                <p>Taste Okayama’s famous white peaches in a picturesque orchard.</p>
+            </div>
+            <div class="col">
+                <h3>Bizen Pottery Workshop</h3>
+                <p>Experience the traditional Bizen pottery-making process.</p>
+            </div>
+            <div class="col">
+                <h3>Local Food Tour</h3>
+                <p>Enjoy specialties like Barazushi and Demi-Katsu Don.</p>
+            </div>
+        </div>
+
     </div>
-    
-    <h2>🚀 Start Your Okayama Adventure!</h2>
-    <ul>
-        <li><a href="/destinations">Explore Attractions</a></li>
-        <li><a href="/experiences">Find Experiences</a></li>
-        <li><a href="/contact">Contact Us</a></li>
-    </ul>
-    
-    <script>
-        let slideIndex = 0;
-        function showSlides() {
-            let slides = document.getElementsByClassName("slides");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000); // 3秒ごとに切り替え
-        }
-        showSlides();
-    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2025 Visit Okayama | All rights reserved</p>
+    </footer>
+
 </body>
 </html>
+
