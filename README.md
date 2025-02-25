@@ -8,4 +8,3 @@ Dive into the soul of Japan’s “Sunny Country” and uncover stories waiting 
 - **Title**: Visit Okayama  
 - **Mission**: Your front-row ticket to Okayama’s culture, history, and future. Stay tuned—epic updates are on the way!
 
-Explore more at [visit-okayama.com](https://visit-okayama.com) (coming soon with a custom domain).
