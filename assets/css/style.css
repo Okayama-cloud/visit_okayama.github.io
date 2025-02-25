@@ -3,12 +3,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
     background-color: #f4f4f9;
 }
 
 /* Hero Section */
-.hero {
+header {
     background-image: url('assets/images/IMG_7048.jpg');
     background-size: cover;
     background-position: center;
@@ -18,18 +17,23 @@ body {
     align-items: center;
     text-align: center;
     color: white;
+    position: relative;
+}
+
+.hero {
+    max-width: 90%;
+    margin: 0 auto;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .hero h1 {
-    font-size: 4em;
+    font-size: 3.5em;
     margin: 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
     font-size: 1.5em;
     margin-top: 20px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .cta-button {
@@ -101,4 +105,3 @@ footer {
     color: white;
     padding: 20px;
 }
-
