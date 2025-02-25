@@ -31,3 +31,40 @@ This website is your ultimate guide to discovering Okayama’s hidden gems and m
 ▶ **[Find Experiences](/experiences)**  
 ▶ **[Contact Us](/contact)**
 
+<!-- スライドショーのスタイル -->
+<style>
+  .slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+  }
+  .slides {
+    display: none;
+    width: 100%;
+  }
+</style>
+
+<!-- スライドショーのHTML -->
+<div class="slideshow-container">
+  <img class="slides" src="/assets/images/IMG_7048.jpg" alt="Okayama Image">
+  <img class="slides" src="/assets/images/IMG_7048.jpg" alt="Okayama Image">
+  <img class="slides" src="/assets/images/IMG_7048.jpg" alt="Okayama Image">
+</div>
+
+<!-- スライドショーのJavaScript -->
+<script>
+  let slideIndex = 0;
+  function showSlides() {
+    let slides = document.getElementsByClassName("slides");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // 3秒ごとに切り替え
+  }
+  showSlides();
+</script>
+
+
