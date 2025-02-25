@@ -7,188 +7,57 @@
 
 body {
     font-family: 'Helvetica Neue', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
 }
 
-h1, h2, h3 {
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Header and Hero Section */
-.header {
-    background-color: #2c3e50;
-    color: white;
+.hero {
+    position: relative;
+    height: 100vh; /* Full height of the screen */
     text-align: center;
-    padding: 100px 20px;
-    background-image: url('assets/images/IMG_7048.jpg');
-    background-size: cover;
-    background-position: center;
+    color: white;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    z-index: 2;
 }
 
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-}
-
-.cta-button {
-    background-color: #3498db;
-    color: white;
-    text-decoration: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #2980b9;
-}
-
-/* Explore Section */
-.explore-section {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: white;
-}
-
-.explore-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #2c3e50;
-}
-
-.card-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 0 10px;
-}
-
-.card {
-    background-color: white;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 10px;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card img {
+.slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 200px;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.card h3 {
-    font-size: 1.8rem;
-    margin: 20px;
-    color: #2c3e50;
+/* Slide fade animation */
+@keyframes fade {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
-.card p {
-    font-size: 1rem;
-    padding: 0 20px 20px;
-    color: #7f8c8d;
-}
-
-/* Footer */
-footer {
-    background-color: #34495e;
-    text-align: center;
-    color: white;
-    padding: 20px;
-}
-
-/* --- Responsive Design (Mobile First) --- */
-
-/* For small devices like phones in portrait orientation */
-@media (max-width: 600px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    .cta-button {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-
-    .card-container {
-        flex-direction: column;
-    }
-
-    .card {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .explore-section h2 {
-        font-size: 2rem;
-    }
-}
-
-/* For medium devices like tablets and small desktops */
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 3rem;
-    }
-
-    .hero p {
-        font-size: 1.4rem;
-    }
-
-    .cta-button {
-        padding: 12px 24px;
-        font-size: 1.1rem;
-    }
-
-    .card-container {
-        justify-content: space-evenly;
-    }
-
-    .card {
-        width: 250px;
-    }
-}
-
-/* For large devices like regular desktops */
-@media (min-width: 1025px) {
-    .hero h1 {
-        font-size: 3.5rem;
-    }
-
-    .hero p {
-        font-size: 1.5rem;
-    }
-
-    .cta-button {
-        padding: 15px 30px;
-        font-size: 1.2rem;
-    }
-
-    .card-container {
-        justify-content: space-between;
-    }
-
-    .card {
-        width: 300px;
-    }
+/* Slide transition */
+.fade {
+    animation-name: fade;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
 }
