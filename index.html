@@ -6,8 +6,8 @@
     <title>Visit Okayama</title>
     <meta name="description" content="The ultimate travel guide to Okayama, Japan">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Google Font for Elegant Typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Hero Section with Background Image -->
@@ -15,30 +15,65 @@
         <div class="hero-text">
             <h1>🌸 Welcome to Visit Okayama 🌸</h1>
             <p>Explore the wonders of Okayama, a land full of nature, history, and vibrant culture.</p>
+            <a href="#content" class="cta-button">Discover More</a>
         </div>
     </header>
 
-    <main>
-        <!-- Main Content Section -->
-        <section class="content">
+    <!-- Main Content Section -->
+    <main id="content">
+        <section class="attractions">
             <h2>🏡 Top Attractions</h2>
-            <ul>
-                <li><a href="#">Okayama Castle</a></li>
-                <li><a href="#">Korakuen Garden</a></li>
-                <li><a href="#">Kurashiki Bikan District</a></li>
-            </ul>
+            <div class="card-container">
+                <div class="card">
+                    <img src="assets/images/okayama-castle.jpg" alt="Okayama Castle" loading="lazy">
+                    <h3>Okayama Castle</h3>
+                    <p>Known as the "Crow Castle" for its black exterior, this iconic landmark offers a glimpse into Japan's feudal history.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/images/korakuen-garden.jpg" alt="Korakuen Garden" loading="lazy">
+                    <h3>Korakuen Garden</h3>
+                    <p>One of Japan's Three Great Gardens, featuring stunning landscapes and traditional tea houses.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/images/kurashiki-bikan.jpg" alt="Kurashiki Bikan District" loading="lazy">
+                    <h3>Kurashiki Bikan District</h3>
+                    <p>A beautifully preserved historical town with canals and traditional warehouses.</p>
+                </div>
+            </div>
+        </section>
 
+        <section class="experiences">
             <h2>🎉 Unique Experiences</h2>
-            <ul>
-                <li><a href="#">Peach Picking</a></li>
-                <li><a href="#">Bizen Pottery Workshop</a></li>
-                <li><a href="#">Local Food Tour</a></li>
-            </ul>
+            <div class="card-container">
+                <div class="card">
+                    <img src="assets/images/peach-picking.jpg" alt="Peach Picking" loading="lazy">
+                    <h3>Peach Picking</h3>
+                    <p>Enjoy Okayama's famous white peaches straight from the orchard.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/images/bizen-pottery.jpg" alt="Bizen Pottery Workshop" loading="lazy">
+                    <h3>Bizen Pottery Workshop</h3>
+                    <p>Create your own traditional Bizen ware pottery.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/images/food-tour.jpg" alt="Local Food Tour" loading="lazy">
+                    <h3>Local Food Tour</h3>
+                    <p>Taste Okayama's specialties like Barazushi and Demi-Katsu Don.</p>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>© 2025 Visit Okayama. All rights reserved.</p>
+        <div class="footer-content">
+            <p>© 2025 Visit Okayama. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
     </footer>
 
     <script src="assets/js/script.js"></script>
