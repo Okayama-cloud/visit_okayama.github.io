@@ -3,14 +3,14 @@ title: Visit Okayama
 description: Discover the hidden gems of Japan's Sunny Country - A comprehensive guide to Okayama's culture, attractions, and local experiences
 logo: /assets/img/logo.png
 show_downloads: false
-google_analytics: # Add your tracking ID here when ready
-theme: null
+google_analytics: "UA-XXXXXXX-X" # Replace with your actual tracking ID
+theme: "jekyll-theme-minimal"  # You can specify a theme here or remove this line if using a custom theme
 
 # Site settings
 author: Okayama Guide Team
 email: contact@example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol, e.g. http://example.com
+baseurl: "/okayama" # Adjust if your site is in a subdirectory
+url: "https://username.github.io/okayama" # Your live site URL
 
 # Build settings
 markdown: kramdown
@@ -34,6 +34,8 @@ navigation:
     url: /about/
   - title: Contact
     url: /contact/
+  - title: Events  # Example of an additional page
+    url: /events/
 
 # Collections
 collections:
