@@ -1,0 +1,62 @@
+# Visit Okayama - Site Configuration
+title: Visit Okayama
+description: Discover the hidden gems of Japan's Sunny Country - A comprehensive guide to Okayama's culture, attractions, and local experiences
+logo: /assets/img/logo.png
+show_downloads: false
+google_analytics: # Add your tracking ID here when ready
+theme: jekyll-theme-minimal
+
+# Site settings
+author: Okayama Guide Team
+email: contact@example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  
+# Navigation menu
+navigation:
+  - title: Home
+    url: /
+  - title: Destinations
+    url: /destinations/
+  - title: Experiences
+    url: /experiences/
+  - title: Local Food
+    url: /food/
+  - title: Trip Planning
+    url: /planning/
+  - title: About Us
+    url: /about/
+  - title: Contact
+    url: /contact/
+
+# Collections
+collections:
+  destinations:
+    output: true
+    permalink: /destinations/:path/
+  experiences:
+    output: true
+    permalink: /experiences/:path/
+
+# Default front matter settings
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: "destinations"
+    values:
+      layout: destination
+  - scope:
+      path: ""
+      type: "experiences"
+    values:
+      layout: experience
