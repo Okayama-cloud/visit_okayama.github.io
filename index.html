@@ -1,80 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visit Okayama</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
-    <!-- ヘッダーセクション（ヒーローイメージ）-->
-    <header class="hero">
-        <div class="overlay">
-            <h1 class="hero-title">🌸 Welcome to Visit Okayama 🌸</h1>
-            <p class="hero-subtitle">Explore the hidden gems of Japan’s Sunny Country</p>
-        </div>
+    <header>
+        <h1>🌸 Welcome to Visit Okayama 🌸</h1>
     </header>
 
-    <!-- メインコンテンツ -->
-    <main>
-        <!-- トップアトラクション -->
-        <section class="attractions">
-            <h2>🏡 Top Attractions</h2>
-            <ul>
-                <li><a href="/destinations/okayama-castle">Okayama Castle</a> – The "Crow Castle" with a striking black exterior</li>
-                <li><a href="/destinations/korakuen">Korakuen Garden</a> – One of Japan’s Three Great Gardens</li>
-                <li><a href="/destinations/kurashiki-bikan">Kurashiki Bikan District</a> – A beautifully preserved historical town</li>
-            </ul>
-        </section>
+    <section id="about" class="section">
+        <h2>About Okayama</h2>
+        <p>Discover Okayama’s rich culture, beautiful nature, and historical sites. A place full of adventure, nature, and history awaits you.</p>
+    </section>
 
-        <!-- 体験 -->
-        <section class="experiences">
-            <h2>🎉 Unique Experiences</h2>
-            <ul>
-                <li><a href="/experiences/peach-picking">Peach Picking</a> – Taste Okayama’s famous white peaches</li>
-                <li><a href="/experiences/bizen-pottery">Bizen Pottery Workshop</a> – Try making Japan’s traditional Bizen ware</li>
-                <li><a href="/experiences/food-tour">Local Food Tour</a> – Enjoy specialties like Barazushi and Demi-Katsu Don</li>
-            </ul>
-        </section>
+    <section id="attractions" class="section">
+        <h2>Top Attractions</h2>
+        <ul>
+            <li><a href="/destinations/okayama-castle">Okayama Castle</a> – A symbol of Okayama with its majestic black exterior</li>
+            <li><a href="/destinations/korakuen">Korakuen Garden</a> – One of Japan’s top three gardens</li>
+            <li><a href="/destinations/kurashiki-bikan">Kurashiki Bikan District</a> – A historical district known for its picturesque beauty</li>
+        </ul>
+    </section>
 
-        <!-- 写真ギャラリー -->
-        <section class="gallery">
-            <h2>📷 Photo Gallery</h2>
-            <div class="slideshow-container">
-                <img class="slides" src="assets/images/IMG_6586.JPG" alt="Okayama Image">
-                <img class="slides" src="assets/images/IMG_6962.JPG" alt="Okayama Image">
-                <img class="slides" src="assets/images/IMG_7048.jpg" alt="Okayama Image">
-            </div>
-        </section>
+    <section id="experiences" class="section">
+        <h2>Unique Experiences</h2>
+        <ul>
+            <li><a href="/experiences/peach-picking">Peach Picking</a> – Taste Okayama’s famous white peaches</li>
+            <li><a href="/experiences/bizen-pottery">Bizen Pottery Workshop</a> – Learn the ancient art of Bizen ware pottery</li>
+            <li><a href="/experiences/food-tour">Local Food Tour</a> – Indulge in Okayama’s local delicacies like Barazushi and Demi-Katsu Don</li>
+        </ul>
+    </section>
 
-        <!-- 終了セクション -->
-        <section class="cta">
-            <h2>🚀 Start Your Okayama Adventure!</h2>
-            <ul>
-                <li><a href="/destinations">Explore Attractions</a></li>
-                <li><a href="/experiences">Find Experiences</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-            </ul>
-        </section>
-    </main>
+    <section id="gallery" class="section">
+        <h2>Photo Gallery</h2>
+        <div class="gallery-container">
+            <img src="/assets/IMG_7048.jpg" alt="Okayama Castle">
+            <img src="/assets/IMG_6586.JPG" alt="Korakuen Garden">
+            <img src="/assets/IMG_6962.JPG" alt="Kurashiki Bikan">
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Visit Okayama | <a href="/contact">Contact Us</a></p>
+    </footer>
 
     <script>
-        let slideIndex = 0;
-        function showSlides() {
-            let slides = document.getElementsByClassName("slides");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 5000); // 5秒ごとに切り替え
-        }
-        showSlides();
+        // Scroll animation for sections
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    section.classList.add('visible');
+                }
+            });
+        });
     </script>
 </body>
-
 </html>
