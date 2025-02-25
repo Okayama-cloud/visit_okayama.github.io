@@ -1,105 +1,104 @@
-/* ベースのスタイル */
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
     margin: 0;
     padding: 0;
     color: #333;
+    background-color: #f4f4f9;
 }
 
-h1, h2 {
-    color: #2980b9;
+/* Hero Section */
+.hero {
+    background-image: url('assets/images/IMG_7048.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    color: white;
 }
 
-h1 {
-    font-size: 3em;
+.hero h1 {
+    font-size: 4em;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5em;
     margin-top: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-h2 {
-    font-size: 2em;
+.cta-button {
     margin-top: 40px;
-}
-
-p, ul {
+    padding: 15px 30px;
     font-size: 1.2em;
-    line-height: 1.6;
-    margin: 10px auto;
-    width: 80%;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-a {
-    color: #2980b9;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* スライドショー */
-.slideshow-container {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    text-align: center;
-}
-
-.slides {
-    display: none;
-    width: 100%;
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-/* リストアイテム */
-ul {
-    padding: 0;
-    margin: 0 auto;
-    width: 70%;
-}
-
-ul li {
-    font-size: 1.2em;
-    line-height: 1.8;
-}
-
-/* リンクボタン */
-ul li a {
-    font-size: 1.3em;
-    font-weight: bold;
-    display: inline-block;
-    padding: 10px 20px;
     background-color: #2980b9;
     color: white;
+    text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-ul li a:hover {
+.cta-button:hover {
     background-color: #1c6d99;
 }
 
-/* フッターや余白 */
+/* Explore Section */
+.explore-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.explore-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 30%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 1.8em;
+    margin: 20px;
+}
+
+.card p {
+    padding: 0 20px 20px;
+    font-size: 1.1em;
+}
+
+/* Footer */
 footer {
     background-color: #2980b9;
-    color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    color: white;
+    padding: 20px;
 }
+
