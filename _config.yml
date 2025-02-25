@@ -4,7 +4,7 @@ description: Discover the hidden gems of Japan's Sunny Country - A comprehensive
 logo: /assets/img/logo.png
 show_downloads: false
 google_analytics: # Add your tracking ID here when ready
-theme: jekyll-theme-minimal
+theme: null
 
 # Site settings
 author: Okayama Guide Team
