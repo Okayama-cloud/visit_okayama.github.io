@@ -18,14 +18,21 @@ header {
     width: 100%;
     height: 100vh; /* Full height */
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
 
 .hero {
     position: relative;
+    width: 100%;
     height: 100%;
-    text-align: center;
-    color: white;
-    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero h1 {
@@ -36,6 +43,7 @@ header {
     font-size: 3rem;
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 1;
 }
 
 .slideshow-container {
@@ -47,24 +55,22 @@ header {
     z-index: 0;
 }
 
-.slide img {
+.slide {
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    animation-name: fade;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    opacity: 0;
 }
 
-/* Fade animation for slideshow */
 @keyframes fade {
     0% { opacity: 0; }
     20% { opacity: 1; }
     80% { opacity: 1; }
     100% { opacity: 0; }
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
 }
 
 /* Main content sections */
