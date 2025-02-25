@@ -3,62 +3,407 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visit Okayama</title>
-    <meta name="description" content="The ultimate travel guide to Okayama, Japan">
+    <title>Visit Okayama - Discover Japan's Hidden Gem</title>
+    <meta name="description" content="Explore Okayama, Japan's hidden gem with historic castles, beautiful gardens, delicious cuisine and vibrant culture. Plan your perfect trip now!">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img src="assets/images/logo.png" alt="Visit Okayama Logo">
+            <span>Visit Okayama</span>
+        </a>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#attractions" class="nav-link">Attractions</a></li>
+            <li><a href="#experiences" class="nav-link">Experiences</a></li>
+            <li><a href="#seasons" class="nav-link">Seasons</a></li>
+            <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            <li><a href="#travel-tips" class="nav-link">Travel Tips</a></li>
+        </ul>
+    </nav>
+
     <!-- Hero Section with Background Image -->
     <header class="hero">
         <div class="hero-text">
-            <h1>🌸 Welcome to Visit Okayama 🌸</h1>
-            <p>Explore the wonders of Okayama, a land full of nature, history, and vibrant culture.</p>
-            <a href="#content" class="cta-button">Discover More</a>
+            <h1>🌸 Discover Okayama 🌸</h1>
+            <p>Japan's hidden gem of natural beauty, ancient history, and vibrant culture</p>
+            <a href="#content" class="cta-button">Explore Okayama <i class="fas fa-arrow-right"></i></a>
         </div>
     </header>
 
     <!-- Main Content Section -->
     <main id="content">
-        <section class="attractions">
-            <h2>🏡 Top Attractions</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="assets/images/okayama-castle.jpg" alt="Okayama Castle" loading="lazy">
-                    <h3>Okayama Castle</h3>
-                    <p>Known as the "Crow Castle" for its black exterior, this iconic landmark offers a glimpse into Japan's feudal history.</p>
+        <!-- About Okayama Section -->
+        <section class="about fade-in">
+            <div class="section-header">
+                <h2>Welcome to Okayama</h2>
+                <p>Located in western Japan, Okayama Prefecture offers a perfect blend of natural beauty, historical treasures, and modern delights</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Nestled between the Seto Inland Sea and the Chūgoku Mountains, Okayama is a destination that combines Japan's timeless beauty with authentic local experiences. Known for its mild climate, the region boasts some of Japan's most significant cultural treasures while remaining refreshingly uncrowded.</p>
+                    <p>From the iconic "Crow Castle" and the picture-perfect Korakuen Garden to the historic merchant district of Kurashiki and the sun-drenched islands of the Seto Inland Sea, Okayama offers unforgettable memories for every type of traveler.</p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-sun"></i>
+                            <h4>Mild Climate</h4>
+                            <p>Enjoy lovely weather year-round with the lowest rainfall in Japan</p>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-utensils"></i>
+                            <h4>Culinary Delights</h4>
+                            <p>Taste famous white peaches, Muscat grapes, and local specialties</p>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-torii-gate"></i>
+                            <h4>Rich History</h4>
+                            <p>Explore castles, gardens, and historic districts dating back centuries</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="assets/images/korakuen-garden.jpg" alt="Korakuen Garden" loading="lazy">
-                    <h3>Korakuen Garden</h3>
-                    <p>One of Japan's Three Great Gardens, featuring stunning landscapes and traditional tea houses.</p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/kurashiki-bikan.jpg" alt="Kurashiki Bikan District" loading="lazy">
-                    <h3>Kurashiki Bikan District</h3>
-                    <p>A beautifully preserved historical town with canals and traditional warehouses.</p>
+                <div class="about-image">
+                    <img src="assets/images/okayama-map.jpg" alt="Map of Okayama Prefecture" loading="lazy">
                 </div>
             </div>
         </section>
 
-        <section class="experiences">
-            <h2>🎉 Unique Experiences</h2>
+        <!-- Attractions Section -->
+        <section id="attractions" class="attractions fade-in">
+            <div class="section-header">
+                <h2>Top Attractions</h2>
+                <p>Must-visit landmarks and destinations that showcase Okayama's unique blend of nature and culture</p>
+            </div>
             <div class="card-container">
                 <div class="card">
-                    <img src="assets/images/peach-picking.jpg" alt="Peach Picking" loading="lazy">
-                    <h3>Peach Picking</h3>
-                    <p>Enjoy Okayama's famous white peaches straight from the orchard.</p>
+                    <div class="card-img-container">
+                        <img src="assets/images/okayama-castle.jpg" alt="Okayama Castle" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Okayama Castle</h3>
+                        <p>Known as "Crow Castle" for its striking black exterior, this magnificent structure dates back to 1597. The castle offers panoramic views of the city and houses fascinating exhibits on samurai culture.</p>
+                        <a href="#" class="card-btn">Learn More</a>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="assets/images/bizen-pottery.jpg" alt="Bizen Pottery Workshop" loading="lazy">
-                    <h3>Bizen Pottery Workshop</h3>
-                    <p>Create your own traditional Bizen ware pottery.</p>
+                    <div class="card-img-container">
+                        <img src="assets/images/korakuen-garden.jpg" alt="Korakuen Garden" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Korakuen Garden</h3>
+                        <p>One of Japan's three most beautiful landscape gardens, Korakuen features meticulously manicured lawns, peaceful ponds, traditional tea houses, and stunning seasonal displays throughout the year.</p>
+                        <a href="#" class="card-btn">Learn More</a>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="assets/images/food-tour.jpg" alt="Local Food Tour" loading="lazy">
-                    <h3>Local Food Tour</h3>
-                    <p>Taste Okayama's specialties like Barazushi and Demi-Katsu Don.</p>
+                    <div class="card-img-container">
+                        <img src="assets/images/kurashiki-bikan.jpg" alt="Kurashiki Bikan District" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Kurashiki Bikan District</h3>
+                        <p>Step back in time in this beautifully preserved merchant district, with its willow-lined canals, white-walled storehouses, and boutique shops selling local crafts and specialties.</p>
+                        <a href="#" class="card-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="assets/images/kibitsu-shrine.jpg" alt="Kibitsu Shrine" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Kibitsu Shrine</h3>
+                        <p>This ancient Shinto shrine features one of Japan's longest wooden corridors and is associated with the legend of Momotaro, a folk hero born from a giant peach who defeated ogres on Ogre Island.</p>
+                        <a href="#" class="card-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more-container">
+                <a href="#" class="view-more-btn">View All Attractions <i class="fas fa-angle-right"></i></a>
+            </div>
+        </section>
+
+        <!-- Unique Experiences Section -->
+        <section id="experiences" class="experiences fade-in">
+            <div class="section-header">
+                <h2>Unique Experiences</h2>
+                <p>Immerse yourself in authentic Okayama activities and create unforgettable memories</p>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="assets/images/peach-picking.jpg" alt="Peach Picking" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Peach Picking</h3>
+                        <p>Enjoy Okayama's famous white peaches straight from the orchard during summer. These juicy, sweet fruits are known as "The Queen of Fruits" throughout Japan for their exceptional quality.</p>
+                        <a href="#" class="card-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="assets/images/bizen-pottery.jpg" alt="Bizen Pottery Workshop" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Bizen Pottery Workshop</h3>
+                        <p>Create your own traditional Bizen ware pottery, one of Japan's oldest pottery styles known for its earthy, rustic aesthetic and unique firing technique that creates natural ash glazes.</p>
+                        <a href="#" class="card-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="assets/images/food-tour.jpg" alt="Local Food Tour" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Local Food Tour</h3>
+                        <p>Taste Okayama's specialties like Barazushi (scattered sushi), Demi-Katsu Don (pork cutlet with demi-glace sauce), and fresh seafood from the Seto Inland Sea on a guided culinary adventure.</p>
+                        <a href="#" class="card-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="assets/images/cycling-tour.jpg" alt="Shimanami Kaido Cycling" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Inland Sea Cycling</h3>
+                        <p>Cycle across the breathtaking Seto Inland Sea on dedicated bike paths connecting picturesque islands, with stunning ocean views, art installations, and charming fishing villages.</p>
+                        <a href="#" class="card-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more-container">
+                <a href="#" class="view-more-btn">View All Experiences <i class="fas fa-angle-right"></i></a>
+            </div>
+        </section>
+
+        <!-- Seasonal Section -->
+        <section id="seasons" class="seasonal-events">
+            <div class="section-header">
+                <h2>Seasonal Highlights</h2>
+                <p>Okayama offers unique experiences throughout the year, each season bringing its own special charm</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">Spring</div>
+                    <div class="timeline-content">
+                        <h3>Cherry Blossom Magic</h3>
+                        <p>Experience the breathtaking cherry blossoms at Korakuen Garden and along the Asahi River. The annual Cherry Blossom Festival features illuminated trees, traditional performances, and food stalls.</p>
+                        <img src="assets/images/spring-okayama.jpg" alt="Cherry blossoms in Okayama" loading="lazy">
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">Summer</div>
+                    <div class="timeline-content">
+                        <h3>Fruit Paradise</h3>
+                        <p>Summer brings Okayama's famous white peaches and muscat grapes. Visit fruit farms for picking experiences, enjoy water activities on the Seto Inland Sea, and join vibrant local festivals with fireworks.</p>
+                        <img src="assets/images/summer-okayama.jpg" alt="Summer fruits in Okayama" loading="lazy">
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">Autumn</div>
+                    <div class="timeline-content">
+                        <h3>Colorful Foliage</h3>
+                        <p>Autumn transforms Okayama's landscapes with brilliant red and gold foliage. Hiking in the Kibi Plain or visiting mountain temples offers spectacular views, along with seasonal harvests and cultural festivals.</p>
+                        <img src="assets/images/autumn-okayama.jpg" alt="Autumn colors in Okayama" loading="lazy">
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">Winter</div>
+                    <div class="timeline-content">
+                        <h3>Winter Wonders</h3>
+                        <p>Winter brings a peaceful atmosphere to Okayama's attractions. Enjoy the illuminated Okayama Castle, winter illuminations at Korakuen Garden, and the unique opportunity to see snow-covered historical sites without the crowds.</p>
+                        <img src="assets/images/winter-okayama.jpg" alt="Winter scene in Okayama" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials fade-in">
+            <div class="section-header">
+                <h2>Traveler Stories</h2>
+                <p>Hear what visitors love about their Okayama experiences</p>
+            </div>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        <p>Okayama was the highlight of our Japan trip! We loved the peaceful atmosphere of Korakuen Garden and the historic charm of Kurashiki. The food was incredible, especially the fresh peaches. It felt like we discovered a hidden gem that most tourists miss.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/images/testimonial-1.jpg" alt="Sarah from Canada" loading="lazy">
+                        <div class="author-info">
+                            <h4>Sarah Thompson</h4>
+                            <p>Canada</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial" style="display: none;">
+                    <div class="testimonial-text">
+                        <p>As a history enthusiast, I was blown away by Okayama Castle and the preserved samurai district. The local guides were incredibly knowledgeable, and I appreciated how uncrowded the attractions were compared to Tokyo and Kyoto. I'll definitely return!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/images/testimonial-2.jpg" alt="Miguel from Spain" loading="lazy">
+                        <div class="author-info">
+                            <h4>Miguel Rodriguez</h4>
+                            <p>Spain</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial" style="display: none;">
+                    <div class="testimonial-text">
+                        <p>The cycling tour through the Kibi Plain was unforgettable. We rode past rice fields, ancient burial mounds, and small villages. The locals were so friendly, and the scenery was breathtaking. Okayama offers such authentic experiences away from the tourist crowds.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/images/testimonial-3.jpg" alt="Emma from Australia" loading="lazy">
+                        <div class="author-info">
+                            <h4>Emma Wilson</h4>
+                            <p>Australia</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery fade-in">
+            <div class="section-header">
+                <h2>Okayama Photo Gallery</h2>
+                <p>Explore the beauty of Okayama through our curated collection of stunning photographs</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/images/gallery-1.jpg" alt="Okayama Castle at sunset" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Okayama Castle at Sunset</h4>
+                        <p>The iconic black castle reflected in the surrounding moat</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery-2.jpg" alt="Korakuen Garden in spring" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Korakuen Garden in Spring</h4>
+                        <p>Cherry blossoms frame the garden's traditional landscape</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery-3.jpg" alt="Kurashiki canal" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Kurashiki Canals</h4>
+                        <p>Traditional boats navigate the willow-lined waterways</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery-4.jpg" alt="Okayama white peaches" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>White Peaches</h4>
+                        <p>Okayama's famous fruit, prized throughout Japan</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery-5.jpg" alt="Seto Inland Sea islands" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Seto Inland Sea</h4>
+                        <p>The picturesque islands dotting the calm waters</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery-6.jpg" alt="Bizen pottery" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Bizen Pottery</h4>
+                        <p>Traditional ceramics with distinctive natural glazes</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery-7.jpg" alt="Kibi Plain cycling path" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Kibi Plain</h4>
+                        <p>Scenic cycling routes through historic landscapes</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery-8.jpg" alt="Traditional Okayama cuisine" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Local Cuisine</h4>
+                        <p>Barazushi, a colorful local specialty</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Tips Section -->
+        <section id="travel-tips" class="travel-tips fade-in">
+            <div class="section-header">
+                <h2>Travel Tips</h2>
+                <p>Essential information to help you plan your perfect Okayama adventure</p>
+            </div>
+            <div class="tips-container">
+                <div class="tip-category">
+                    <div class="tip-icon">
+                        <i class="fas fa-plane-arrival"></i>
+                    </div>
+                    <h3>Getting There</h3>
+                    <ul>
+                        <li>Okayama is serviced by Okayama Airport with connections to major Japanese cities</li>
+                        <li>The Shinkansen (bullet train) connects Okayama to Tokyo (3.5 hours) and Osaka (45 minutes)</li>
+                        <li>JR trains provide access to nearby attractions and cities</li>
+                    </ul>
+                </div>
+                <div class="tip-category">
+                    <div class="tip-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3>Where to Stay</h3>
+                    <ul>
+                        <li>Downtown Okayama offers modern hotels near the train station</li>
+                        <li>Kurashiki provides traditional ryokan (Japanese inns) for an authentic experience</li>
+                        <li>Rural areas feature farm stays and boutique accommodations</li>
+                    </ul>
+                </div>
+                <div class="tip-category">
+                    <div class="tip-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Best Time to Visit</h3>
+                    <ul>
+                        <li>Spring (March-May): Cherry blossoms and mild weather</li>
+                        <li>Summer (June-August): Fruit picking and festivals</li>
+                        <li>Autumn (September-November): Colorful foliage and pleasant temperatures</li>
+                        <li>Winter (December-February): Fewer crowds and winter illuminations</li>
+                    </ul>
+                </div>
+                <div class="tip-category">
+                    <div class="tip-icon">
+                        <i class="fas fa-subway"></i>
+                    </div>
+                    <h3>Getting Around</h3>
+                    <ul>
+                        <li>JR train and local bus networks connect major attractions</li>
+                        <li>The Okayama Electric Tramway provides easy city navigation</li>
+                        <li>Rental bicycles are available for exploring flat areas like the Kibi Plain</li>
+                        <li>Rental cars are recommended for reaching rural areas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Plan Your Okayama Adventure</h2>
+                <p>Begin your journey to discover Okayama's treasures. From ancient castles to stunning gardens, from delicious cuisine to unique cultural experiences, your perfect Japanese adventure awaits.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="cta-primary">Plan Your Trip <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" class="cta-secondary">Download Travel Guide</a>
                 </div>
             </div>
         </section>
@@ -67,14 +412,60 @@
     <!-- Footer Section -->
     <footer>
         <div class="footer-content">
-            <p>© 2025 Visit Okayama. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
+            <div class="footer-section">
+                <h3>Visit Okayama</h3>
+                <p>Your ultimate guide to exploring the hidden gem of western Japan. Discover history, culture, and natural beauty in Okayama Prefecture.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#attractions">Attractions</a></li>
+                    <li><a href="#experiences">Experiences</a></li>
+                    <li><a href="#seasons">Seasonal Guide</a></li>
+                    <li><a href="#gallery">Photo Gallery</a></li>
+                    <li><a href="#travel-tips">Travel Tips</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Travel Planning</a></li>
+                    <li><a href="#">Transportation</a></li>
+                    <li><a href="#">Accommodation</a></li>
+                    <li><a href="#">Food & Dining</a></li>
+                    <li><a href="#">Festivals & Events</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for travel tips, event updates, and special offers.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> info@visitokayama.com</p>
+                    <p><i class="fas fa-phone"></i> +81-XX-XXXX-XXXX</p>
+                </div>
             </div>
         </div>
+        <div class="footer-bottom">
+            <p>© 2025 Visit Okayama. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     <script src="assets/js/script.js"></script>
 </body>
