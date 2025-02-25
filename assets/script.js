@@ -11,7 +11,7 @@ function showSlides() {
     if (slideIndex > slides.length) { slideIndex = 1 }    
     slides[slideIndex - 1].style.opacity = "1";  
 
-    setTimeout(showSlides, 5000); // Change slide every 5 seconds
+    setTimeout(showSlides, 5000); // 5秒ごとに切り替え
 }
 
-showSlides(); // Start the slideshow
+showSlides(); // スライドショーを開始
