@@ -1,150 +1,90 @@
-/* Global styles */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: #f4f4f9; /* Soft off-white background */
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
 }
 
-/* Header styles */
-.header {
-    background-image: url('assets/images/your-illustration.jpg'); /* Add your background image here */
-    background-size: cover;
-    background-position: center;
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section (Background Image + Title) */
+.hero-section {
+    height: 100vh;
+    background: url('assets/images/your-image.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 100px 20px;
-    position: relative;
+    padding: 50px 0;
 }
 
-.title {
-    font-size: 3.5rem;
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
     font-weight: bold;
-    margin-bottom: 20px;
 }
 
-.header-subtitle {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-top: 10px;
+.hero-section p {
+    font-size: 1.2rem;
+    margin-top: 0;
 }
 
-/* Main content */
-main {
-    padding: 40px 20px;
+/* Content Section */
+.content {
+    padding: 40px;
+    background-color: white;
 }
 
-section {
-    margin-bottom: 50px;
-}
-
-h2 {
-    font-size: 2.5rem;
+.content h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #333;
-    text-align: center;
 }
 
-/* Feature cards */
-.feature-cards {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+.content ul {
+    list-style: none;
+    padding: 0;
 }
 
-.card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    font-size: 1.5rem;
-    color: #006d77;
-    margin-bottom: 15px;
-}
-
-.card p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Call to action (CTA) */
-.cta {
-    background-color: #ffb703; /* Warm orange */
-    padding: 40px;
-    text-align: center;
-    border-radius: 8px;
-}
-
-.cta h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: white;
-}
-
-.cta p {
-    font-size: 1rem;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    background-color: white;
-    color: #006d77;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #006d77;
-    color: white;
+.content li {
+    margin: 10px 0;
 }
 
 /* Footer */
 footer {
     background-color: #333;
-    padding: 20px;
     color: white;
     text-align: center;
+    padding: 20px;
 }
 
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+footer a {
+    color: #007bff;
 }
 
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.footer-links a:hover {
+footer a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
 }
