@@ -1,148 +1,63 @@
-/* 全体設定 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Okayama</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>🌸 Welcome to Visit Okayama 🌸</h1>
+    </header>
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
+    <section id="about" class="section">
+        <h2>About Okayama</h2>
+        <p>Discover Okayama’s rich culture, beautiful nature, and historical sites. A place full of adventure, nature, and history awaits you.</p>
+    </section>
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+    <section id="attractions" class="section">
+        <h2>Top Attractions</h2>
+        <ul>
+            <li><a href="/destinations/okayama-castle">Okayama Castle</a> – A symbol of Okayama with its majestic black exterior</li>
+            <li><a href="/destinations/korakuen">Korakuen Garden</a> – One of Japan’s top three gardens</li>
+            <li><a href="/destinations/kurashiki-bikan">Kurashiki Bikan District</a> – A historical district known for its picturesque beauty</li>
+        </ul>
+    </section>
 
-/* ヘッダー（ヒーローセクション） */
-.hero {
-    position: relative;
-    background: url('assets/images/IMG_6586.JPG') no-repeat center center/cover;
-    height: 100vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+    <section id="experiences" class="section">
+        <h2>Unique Experiences</h2>
+        <ul>
+            <li><a href="/experiences/peach-picking">Peach Picking</a> – Taste Okayama’s famous white peaches</li>
+            <li><a href="/experiences/bizen-pottery">Bizen Pottery Workshop</a> – Learn the ancient art of Bizen ware pottery</li>
+            <li><a href="/experiences/food-tour">Local Food Tour</a> – Indulge in Okayama’s local delicacies like Barazushi and Demi-Katsu Don</li>
+        </ul>
+    </section>
 
-.hero .overlay {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-}
+    <section id="gallery" class="section">
+        <h2>Photo Gallery</h2>
+        <div class="gallery-container">
+            <img src="/assets/IMG_7048.jpg" alt="Okayama Castle">
+            <img src="/assets/IMG_6586.JPG" alt="Korakuen Garden">
+            <img src="/assets/IMG_6962.JPG" alt="Kurashiki Bikan">
+        </div>
+    </section>
 
-.hero-title {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+    <footer>
+        <p>© 2025 Visit Okayama | <a href="/contact">Contact Us</a></p>
+    </footer>
 
-.hero-subtitle {
-    font-size: 1.5rem;
-    font-weight: 300;
-}
-
-/* 各セクション */
-section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-/* トップアトラクション */
-.attractions ul,
-.experiences ul {
-    list-style-type: none;
-}
-
-.attractions li,
-.experiences li {
-    margin: 15px 0;
-    font-size: 1.2rem;
-}
-
-.attractions a,
-.experiences a {
-    color: #3498db;
-    transition: all 0.3s ease;
-}
-
-.attractions a:hover,
-.experiences a:hover {
-    color: #2c3e50;
-    text-decoration: underline;
-}
-
-/* 写真ギャラリー */
-.gallery {
-    background-color: #ecf0f1;
-    padding: 40px 20px;
-}
-
-.slideshow-container {
-    max-width: 80%;
-    margin: auto;
-    position: relative;
-}
-
-.slides {
-    display: none;
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-
-/* CTAセクション */
-.cta {
-    background-color: #3498db;
-    color: white;
-    padding: 40px 20px;
-}
-
-.cta h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.cta ul {
-    list-style-type: none;
-}
-
-.cta li {
-    margin: 10px 0;
-    font-size: 1.2rem;
-}
-
-.cta a {
-    color: white;
-    padding: 10px 20px;
-    background-color: #2c3e50;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.cta a:hover {
-    background-color: #34495e;
-}
-
-/* レスポンシブデザイン */
-@media screen and (max-width: 768px) {
-    .hero-title {
-        font-size: 3rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-}
+    <script>
+        // Scroll animation for sections
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
