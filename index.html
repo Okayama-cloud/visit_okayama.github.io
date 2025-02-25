@@ -1,88 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Visit Okayama</title>
-  <!-- Google Fonts: Montserrat & Roboto -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Okayama</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <header class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Welcome to Visit Okayama</h1>
-      <p>Experience the charm and beauty of Okayama</p>
-      <a href="#explore" class="btn">Explore Now</a>
-    </div>
-  </header>
-  
-  <main>
-    <section id="explore" class="section">
-      <div class="container">
-        <h2>Top Attractions</h2>
-        <div class="cards">
-          <div class="card">
-            <img src="assets/images/okayama-castle.jpg" alt="Okayama Castle">
-            <h3>Okayama Castle</h3>
-            <p>Discover the iconic castle with its rich history.</p>
-          </div>
-          <div class="card">
-            <img src="assets/images/korakuen.jpg" alt="Korakuen Garden">
-            <h3>Korakuen Garden</h3>
-            <p>Explore one of Japan’s most beautiful gardens.</p>
-          </div>
-          <div class="card">
-            <img src="assets/images/kurashiki-bikan.jpg" alt="Kurashiki Bikan District">
-            <h3>Kurashiki Bikan District</h3>
-            <p>Stroll through the charming historic canal district.</p>
-          </div>
+
+    <!-- ヘッダーセクション（ヒーローイメージ）-->
+    <header class="hero">
+        <div class="overlay">
+            <h1 class="hero-title">🌸 Welcome to Visit Okayama 🌸</h1>
+            <p class="hero-subtitle">Explore the hidden gems of Japan’s Sunny Country</p>
         </div>
-      </div>
-    </section>
-    
-    <section class="section">
-      <div class="container">
-        <h2>Unique Experiences</h2>
-        <div class="cards">
-          <div class="card">
-            <img src="assets/images/peach-picking.jpg" alt="Peach Picking">
-            <h3>Peach Picking</h3>
-            <p>Taste the famous white peaches in a scenic orchard.</p>
-          </div>
-          <div class="card">
-            <img src="assets/images/bizen-pottery.jpg" alt="Bizen Pottery Workshop">
-            <h3>Bizen Pottery Workshop</h3>
-            <p>Learn the art of traditional pottery making.</p>
-          </div>
-          <div class="card">
-            <img src="assets/images/food-tour.jpg" alt="Local Food Tour">
-            <h3>Local Food Tour</h3>
-            <p>Enjoy local specialties on a guided culinary tour.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="cta-section">
-      <div class="container">
-        <h2>Plan Your Trip</h2>
-        <p>Get all the information you need for an unforgettable journey to Okayama.</p>
-        <a href="#contact" class="btn btn-primary">Get Started</a>
-      </div>
-    </section>
-  </main>
-  
-  <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 Visit Okayama. All Rights Reserved.</p>
-      <div class="footer-links">
-        <a href="/destinations">Attractions</a>
-        <a href="/experiences">Experiences</a>
-        <a href="/contact">Contact</a>
-      </div>
-    </div>
-  </footer>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- トップアトラクション -->
+        <section class="attractions">
+            <h2>🏡 Top Attractions</h2>
+            <ul>
+                <li><a href="/destinations/okayama-castle">Okayama Castle</a> – The "Crow Castle" with a striking black exterior</li>
+                <li><a href="/destinations/korakuen">Korakuen Garden</a> – One of Japan’s Three Great Gardens</li>
+                <li><a href="/destinations/kurashiki-bikan">Kurashiki Bikan District</a> – A beautifully preserved historical town</li>
+            </ul>
+        </section>
+
+        <!-- 体験 -->
+        <section class="experiences">
+            <h2>🎉 Unique Experiences</h2>
+            <ul>
+                <li><a href="/experiences/peach-picking">Peach Picking</a> – Taste Okayama’s famous white peaches</li>
+                <li><a href="/experiences/bizen-pottery">Bizen Pottery Workshop</a> – Try making Japan’s traditional Bizen ware</li>
+                <li><a href="/experiences/food-tour">Local Food Tour</a> – Enjoy specialties like Barazushi and Demi-Katsu Don</li>
+            </ul>
+        </section>
+
+        <!-- 写真ギャラリー -->
+        <section class="gallery">
+            <h2>📷 Photo Gallery</h2>
+            <div class="slideshow-container">
+                <img class="slides" src="assets/images/IMG_6586.JPG" alt="Okayama Image">
+                <img class="slides" src="assets/images/IMG_6962.JPG" alt="Okayama Image">
+                <img class="slides" src="assets/images/IMG_7048.jpg" alt="Okayama Image">
+            </div>
+        </section>
+
+        <!-- 終了セクション -->
+        <section class="cta">
+            <h2>🚀 Start Your Okayama Adventure!</h2>
+            <ul>
+                <li><a href="/destinations">Explore Attractions</a></li>
+                <li><a href="/experiences">Find Experiences</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // 5秒ごとに切り替え
+        }
+        showSlides();
+    </script>
 </body>
+
 </html>
