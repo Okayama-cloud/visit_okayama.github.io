@@ -1,63 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visit Okayama</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <h1>🌸 Welcome to Visit Okayama 🌸</h1>
-    </header>
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <section id="about" class="section">
-        <h2>About Okayama</h2>
-        <p>Discover Okayama’s rich culture, beautiful nature, and historical sites. A place full of adventure, nature, and history awaits you.</p>
-    </section>
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #4e54c8, #8f94fb); /* Gradient background */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
 
-    <section id="attractions" class="section">
-        <h2>Top Attractions</h2>
-        <ul>
-            <li><a href="/destinations/okayama-castle">Okayama Castle</a> – A symbol of Okayama with its majestic black exterior</li>
-            <li><a href="/destinations/korakuen">Korakuen Garden</a> – One of Japan’s top three gardens</li>
-            <li><a href="/destinations/kurashiki-bikan">Kurashiki Bikan District</a> – A historical district known for its picturesque beauty</li>
-        </ul>
-    </section>
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Title background */
+    border-radius: 10px;
+}
 
-    <section id="experiences" class="section">
-        <h2>Unique Experiences</h2>
-        <ul>
-            <li><a href="/experiences/peach-picking">Peach Picking</a> – Taste Okayama’s famous white peaches</li>
-            <li><a href="/experiences/bizen-pottery">Bizen Pottery Workshop</a> – Learn the ancient art of Bizen ware pottery</li>
-            <li><a href="/experiences/food-tour">Local Food Tour</a> – Indulge in Okayama’s local delicacies like Barazushi and Demi-Katsu Don</li>
-        </ul>
-    </section>
+/* General section styles */
+section {
+    opacity: 0;
+    transform: translateY(50px); /* Initially hidden, sliding in */
+    transition: all 1s ease-in-out;
+    margin: 40px 10%;
+}
 
-    <section id="gallery" class="section">
-        <h2>Photo Gallery</h2>
-        <div class="gallery-container">
-            <img src="/assets/IMG_7048.jpg" alt="Okayama Castle">
-            <img src="/assets/IMG_6586.JPG" alt="Korakuen Garden">
-            <img src="/assets/IMG_6962.JPG" alt="Kurashiki Bikan">
-        </div>
-    </section>
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-    <footer>
-        <p>© 2025 Visit Okayama | <a href="/contact">Contact Us</a></p>
-    </footer>
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
 
-    <script>
-        // Scroll animation for sections
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight) {
-                    section.classList.add('visible');
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+/* Link styles */
+a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
+
+/* Gallery container for images */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+footer a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
