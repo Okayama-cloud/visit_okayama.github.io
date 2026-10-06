@@ -145,3 +145,19 @@ button.place{width:100%;background:none;border:0;border-bottom:0;font:inherit;co
 .placeDesc{display:block;text-align:left}
 }
 @media(prefers-reduced-motion:reduce){.more,.tile,.tile>img,.tile:after{transition:none}}
+
+/* About page */
+.about{--c:var(--denim);--on:var(--paper)}
+.team{padding:0 4vw 16vh}
+.members{display:grid;grid-template-columns:repeat(3,1fr);gap:4vw;margin-top:8vh}
+.member{border-top:1px solid var(--line);padding-top:20px}
+.member h3{font:400 clamp(30px,3.6vw,48px)/1 var(--serif);margin:0 0 8px;letter-spacing:-.02em}
+.member .role{margin:0 0 14px;font-size:14px;color:var(--muted)}
+.member .line{margin:0;font-size:15px;line-height:1.75;max-width:300px}
+.contact{min-height:90vh;display:grid;place-items:center;text-align:center;padding:14vh 6vw}
+.contact h2{font:400 clamp(70px,13vw,190px)/.85 var(--serif);letter-spacing:-.03em;margin:0}
+.contact p{max-width:420px;margin:30px auto 0;font-size:15px;line-height:1.8;color:var(--muted)}
+.mail{display:inline-block;margin-top:26px;font:400 clamp(26px,4vw,52px)/1.1 var(--serif);border-bottom:1px solid var(--ink);padding-bottom:6px;transition:letter-spacing .4s}
+.mail:hover,.mail:focus-visible{letter-spacing:.01em}
+@media(max-width:700px){.members{grid-template-columns:1fr;gap:34px}.team{padding:0 6vw 12vh}}
+@media(prefers-reduced-motion:reduce){.mail{transition:none}}
