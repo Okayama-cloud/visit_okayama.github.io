@@ -161,3 +161,18 @@ button.place{width:100%;background:none;border:0;border-bottom:0;font:inherit;co
 .mail:hover,.mail:focus-visible{letter-spacing:.01em}
 @media(max-width:700px){.members{grid-template-columns:1fr;gap:34px}.team{padding:0 6vw 12vh}}
 @media(prefers-reduced-motion:reduce){.mail{transition:none}}
+
+/* Instagram links */
+.ig{border-bottom:1px solid currentColor;padding-bottom:2px}
+.contact p.alt{margin-top:22px}
+.contact p.alt .ig{color:var(--ink)}
+
+.igicon{display:inline-flex;align-items:center;border:0;padding:0;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.igicon:hover,.igicon:focus-visible{transform:scale(1.15)}
+.igicon.lg{margin-top:14px}
+.igicon.lg svg{width:36px;height:36px}
+.footerline{align-items:center}
+@media(prefers-reduced-motion:reduce){.igicon{transition:none}}
+
+.igicon img{display:block;width:24px;height:24px}
+.igicon.lg img{width:40px;height:40px}
