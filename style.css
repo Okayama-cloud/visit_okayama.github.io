@@ -176,3 +176,6 @@ button.place{width:100%;background:none;border:0;border-bottom:0;font:inherit;co
 
 .igicon img{display:block;width:24px;height:24px}
 .igicon.lg img{width:40px;height:40px}
+
+/* Larger tap targets for the nav on phones */
+@media(max-width:700px){.navlinks{gap:12px;font-size:12px}.navlinks a{padding:16px 4px}.brand{font-size:14px}}
