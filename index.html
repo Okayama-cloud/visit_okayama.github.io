@@ -12,164 +12,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&display=swap">
-<style>
-:root{--paper:#edeee8;--ink:#12202a;--muted:#4d5a62;--line:#b9bfbf;--denim:#1e3a56;--serif:'Instrument Serif',Georgia,serif;--sans:Manrope,system-ui,Arial,sans-serif}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
-img{display:block}
-.small{font-size:13px;letter-spacing:.02em}
-
-.progress{position:fixed;top:0;left:0;right:0;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:0 50%;z-index:20}
-.nav{position:fixed;top:0;left:0;right:0;height:76px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;z-index:10;color:#fff;mix-blend-mode:difference}
-.brand{font-weight:600;font-size:15px}
-.navlinks{display:flex;gap:30px;font-size:13px}
-.navlinks a{padding:6px 0;border-bottom:1px solid transparent;transition:border-color .2s}
-.navlinks a:hover{border-color:#fff}
-
-/* Hero: the one orchestrated moment */
-.hero{height:100vh;height:100svh;min-height:640px;position:relative;display:grid;place-items:center;overflow:hidden;background:#222}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2),transparent 45%,rgba(0,0,0,.35))}
-.heroimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.85);animation:settle 2.6s cubic-bezier(.2,.7,.2,1) both}
-.heroCopy{position:relative;z-index:2;color:#fff;text-align:center}
-.eyebrow{font-size:14px;margin-bottom:18px;opacity:0;animation:fade 1s .9s both}
-.hero h1{font:400 clamp(84px,17vw,250px)/.85 var(--serif);letter-spacing:-.03em;margin:0}
-.hero h1 span{display:block;overflow:hidden;padding-bottom:.08em}
-.hero h1 i{display:block;font-style:italic;animation:rise 1.2s .3s cubic-bezier(.2,.7,.2,1) both}
-.heroMeta{position:absolute;z-index:3;bottom:30px;left:4vw;right:4vw;display:flex;justify-content:space-between;color:#fff;font-size:13px}
-.scroll{display:flex;align-items:center;gap:12px}
-.scroll b{display:block;width:48px;height:1px;background:#fff}
-@keyframes settle{from{transform:scale(1.12)}to{transform:scale(1.02)}}
-@keyframes rise{from{transform:translateY(105%)}to{transform:none}}
-@keyframes fade{to{opacity:1}}
-
-/* Intro */
-.intro{padding:18vh 8vw 16vh;display:grid;grid-template-columns:1fr 2fr;gap:8vw}
-.intro p.lead{margin:0;font:400 clamp(40px,6vw,86px)/1.04 var(--serif);letter-spacing:-.02em;max-width:950px}
-.intro p.lead+p.lead{margin-top:.6em;color:var(--muted)}
-.intro .small{color:var(--muted);max-width:220px;line-height:1.7}
-
-/* Photo features */
-.feature{padding:0 4vw 18vh}
-.featureHead{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px;gap:20px}
-.featureHead h2{font:400 clamp(52px,9vw,130px)/.9 var(--serif);letter-spacing:-.03em;margin:0}
-.featureHead p{margin:0 0 .6em;max-width:260px;font-size:14px;line-height:1.7;color:var(--muted)}
-.frame{position:relative;height:78vh;overflow:hidden;background:#c9cfcf}
-.frame img{position:absolute;left:0;top:-10%;width:100%;height:120%;object-fit:cover;will-change:transform}
-.caption{display:flex;justify-content:space-between;padding-top:14px;font-size:13px;color:var(--muted)}
-
-/* Sea */
-.sea{padding:4vh 4vw 18vh}
-.seaGrid{display:grid;grid-template-columns:1fr 1.6fr;gap:5vw;align-items:center}
-.seaText{padding-left:4vw}
-.seaText h2{font:400 clamp(64px,10vw,150px)/.85 var(--serif);letter-spacing:-.03em;margin:0 0 24px}
-.seaText p{max-width:340px;font-size:15px;line-height:1.8;color:var(--muted);margin:0}
-.seaGrid .frame{height:88vh}
-
-/* Statement */
-.statement{min-height:75vh;background:var(--denim);color:var(--paper);display:grid;place-items:center;text-align:center;padding:10vw}
-.statement h2{font:400 clamp(52px,9.5vw,140px)/.95 var(--serif);letter-spacing:-.025em;margin:0;max-width:1200px}
-.statement h2 em{display:block}
-
-/* Places */
-.places{padding:15vh 4vw}
-.placesTop{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
-.places h2{font:400 clamp(56px,9vw,130px)/.9 var(--serif);letter-spacing:-.03em;margin:0}
-.placesTop p{margin:0 0 .8em;color:var(--muted);font-size:14px}
-.placeList{margin-top:9vh;border-top:1px solid var(--line)}
-.place{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:20px;padding:26px 0;border-bottom:1px solid var(--line);transition:padding .4s}
-.place:hover,.place:focus-visible{padding-left:20px;padding-right:20px}
-.placeName{font:400 clamp(30px,4.6vw,64px)/1 var(--serif)}
-.placeDesc{font-size:14px;color:var(--muted);text-align:right}
-
-/* End */
-.end{min-height:100vh;min-height:100svh;display:grid;place-items:center;text-align:center;position:relative;padding:12vh 6vw 14vh}
-.end h2{font:400 clamp(70px,13vw,190px)/.85 var(--serif);letter-spacing:-.03em;margin:0}
-.end h2 em{display:block}
-.getting{max-width:420px;margin:34px auto 0;font-size:15px;line-height:1.8;color:var(--muted)}
-.enter{display:inline-block;margin-top:28px;font-size:14px;font-weight:500;border-bottom:1px solid var(--ink);padding-bottom:6px}
-.footerline{position:absolute;bottom:30px;left:4vw;right:4vw;display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
-
-@media(max-width:700px){
-.nav{height:64px}.navlinks{gap:16px}
-.hero h1{font-size:30vw}
-.intro{grid-template-columns:1fr;gap:28px;padding:15vh 7vw 12vh}
-.feature{padding:0 5vw 14vh}.featureHead{flex-direction:column;align-items:start;gap:10px}
-.frame{height:62vh}
-.seaGrid{grid-template-columns:1fr}.seaText{padding:0 2vw}.seaGrid .frame{height:65vh}
-.places{padding:12vh 6vw}.placeDesc{display:none}
-.place{grid-template-columns:1fr}
-}
-@media(prefers-reduced-motion:reduce){
-html{scroll-behavior:auto}
-.heroimg,.hero h1 i,.eyebrow{animation:none;opacity:1}
-.place{transition:none}
-}
-
-/* Category colours */
-.food{--c:#e8c4ae;--on:var(--ink)}
-.nature{--c:#b9cbbf;--on:var(--ink)}
-.culture{--c:var(--denim);--on:var(--paper)}
-.navlinks a[aria-current]{border-color:#fff}
-
-/* Choose your way in (home + switcher) */
-.ways{padding:0 4vw 18vh}
-.waysTop{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
-.ways h2{font:400 clamp(48px,7.5vw,110px)/.92 var(--serif);letter-spacing:-.03em;margin:0}
-.waysTop p{margin:0 0 .7em;max-width:300px;font-size:14px;line-height:1.7;color:var(--muted)}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.tile{display:flex;flex-direction:column;justify-content:space-between;min-height:54vh;padding:28px;background:var(--c);color:var(--on);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
-.tile:hover,.tile:focus-visible{transform:translateY(-6px)}
-.tile b{font:400 clamp(56px,7vw,110px)/.9 var(--serif);letter-spacing:-.03em}
-.tile p{margin:0 0 18px;max-width:260px;font-size:15px;line-height:1.6}
-.tile u{font-size:14px;font-weight:500;text-underline-offset:5px}
-.tiles.two{grid-template-columns:repeat(2,1fr)}
-.tiles.two .tile{min-height:40vh}
-
-/* Category pages */
-.switch{padding:0 4vw 12vh}
-.switch h2{font:400 clamp(40px,6vw,84px)/1 var(--serif);letter-spacing:-.03em;margin:0 0 24px}
-.cat .footerline{position:static;padding:0 4vw 30px}
-@media(max-width:700px){
-.tiles,.tiles.two{grid-template-columns:1fr}.tile,.tiles.two .tile{min-height:34vh}
-.ways{padding:0 5vw 14vh}
-.navlinks .hide-sm{display:none}
-}
-
-/* Photo tiles (home + switcher) */
-.tile{position:relative;overflow:hidden;isolation:isolate}
-.tile>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
-.tile:after{content:"";position:absolute;inset:0;background:var(--c);opacity:.86;z-index:-1;transition:opacity .5s}
-.tile:hover:after,.tile:focus-visible:after{opacity:.68}
-.tile:hover>img{transform:scale(1.05)}
-
-/* Category pages reuse hero / feature / places / statement from home */
-.cat .statement{background:var(--c);color:var(--on)}
-.spot{border-bottom:1px solid var(--line)}
-button.place{width:100%;background:none;border:0;border-bottom:0;font:inherit;color:inherit;text-align:left;cursor:pointer}
-.more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.2,.7,.2,1)}
-.spot.open .more{grid-template-rows:1fr}
-.more>div{overflow:hidden}
-.more p{margin:0;padding:0 0 30px;max-width:560px;font-size:16px;line-height:1.8;color:var(--muted)}
-.spot.open .placeName{font-style:italic}
-.cat .footerline{position:static;padding:0 4vw 30px}
-@media(max-width:700px){
-.place{grid-template-columns:1fr;gap:6px}
-.placeDesc{display:block;text-align:left}
-}
-@media(prefers-reduced-motion:reduce){.more,.tile,.tile>img,.tile:after{transition:none}}
-
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="progress" aria-hidden="true"></div>
 <nav class="nav" aria-label="Main">
-  <a class="brand" href="#home">Visit Okayama</a>
-  <div class="navlinks"><a href="#food">Food</a><a href="#nature">Nature</a><a href="#culture">Culture</a><a class="hide-sm" href="#visit">Getting here</a></div>
+  <a class="brand" href="index.html">Visit Okayama</a>
+  <div class="navlinks"><a href="food.html">Food</a><a href="nature.html">Nature</a><a href="culture.html">Culture</a><a class="hide-sm" href="#visit">Getting here</a></div>
 </nav>
-<div class="view" id="view-home">
+
 
 <header class="hero" id="top">
   <img class="heroimg" src="assets/IMG_6962.JPG" alt="Okayama landscape" fetchpriority="high" decoding="async">
@@ -227,10 +78,10 @@ button.place{width:100%;background:none;border:0;border-bottom:0;font:inherit;co
 <section class="places">
   <div class="placesTop"><h2>Go further.</h2><p>Four places to start planning.</p></div>
   <div class="placeList">
-    <a class="place" href="#places"><span class="placeName">Okayama City</span><span class="placeDesc">Castle and garden</span></a>
-    <a class="place" href="#kurashiki"><span class="placeName">Kurashiki</span><span class="placeDesc">Old town</span></a>
-    <a class="place" href="#sea"><span class="placeName">Setouchi</span><span class="placeDesc">Islands and sea</span></a>
-    <a class="place" href="#sea"><span class="placeName">Inujima</span><span class="placeDesc">Art island</span></a>
+    <a class="place" href="culture.html"><span class="placeName">Okayama City</span><span class="placeDesc">Castle and garden</span></a>
+    <a class="place" href="culture.html"><span class="placeName">Kurashiki</span><span class="placeDesc">Old town</span></a>
+    <a class="place" href="nature.html"><span class="placeName">Setouchi</span><span class="placeDesc">Islands and sea</span></a>
+    <a class="place" href="culture.html"><span class="placeName">Inujima</span><span class="placeDesc">Art island</span></a>
   </div>
 </section>
 
@@ -244,69 +95,6 @@ button.place{width:100%;background:none;border:0;border-bottom:0;font:inherit;co
 </section>
 </main>
 
-</div>
-<div class="view cat food" id="view-food" hidden><header class="hero">
-  <img class="heroimg" src="assets/IMG_6962.JPG" alt="" fetchpriority="high" decoding="async">
-  <div class="heroCopy">
-    <div class="eyebrow">Okayama, western Japan</div>
-    <h1><span><i>Food</i></span></h1>
-  </div>
-  <div class="heroMeta"><a href="#ways">Back to Okayama</a><span class="scroll"><b></b>Scroll to explore</span></div>
-</header>
-
-<main>
-<section class="feature" style="padding-top:18vh">
-  <div class="featureHead"><h2>Food in Okayama</h2><p>Peaches, grapes and Seto Inland Sea seafood. Okayama is known as the land of fruit, and the local dishes follow the seasons.</p></div>
-  <div class="frame"><img data-par src="assets/IMG_6586.JPG" alt="" loading="lazy" decoding="async"></div>
-  <div class="caption"><span>Fruit, rice, sea</span><span>34°39′N 133°55′E</span></div>
-</section>
-
-<section class="places" style="padding-top:2vh">
-  <div class="placesTop"><h2>What to try.</h2><p>Tap a dish to read more.</p></div>
-  <div class="placeList">
-    <div class="spot"><button class="place" aria-expanded="false"><span class="placeName">Barazushi</span><span class="placeDesc">Everywhere, festive tables</span></button><div class="more"><div><p>Scattered sushi rice topped with Seto Inland Sea seafood and seasonal vegetables. A celebration dish across the prefecture.</p></div></div></div>
-    <div class="spot"><button class="place" aria-expanded="false"><span class="placeName">Demi-katsu-don</span><span class="placeDesc">Okayama City</span></button><div class="more"><div><p>A pork cutlet on rice under a glossy demi-glace sauce. Local comfort food.</p></div></div></div>
-    <div class="spot"><button class="place" aria-expanded="false"><span class="placeName">White peaches</span><span class="placeDesc">Summer</span></button><div class="more"><div><p>Soft, fragrant and very juicy. Okayama is famous for them, and they are best eaten fresh.</p></div></div></div>
-    <div class="spot"><button class="place" aria-expanded="false"><span class="placeName">Muscat grapes</span><span class="placeDesc">Late summer into autumn</span></button><div class="more"><div><p>Greenhouse-grown, sweet and seedless to eat whole. Often given as a gift.</p></div></div></div>
-    <div class="spot"><button class="place" aria-expanded="false"><span class="placeName">Kibi dango</span><span class="placeDesc">Okayama Station, souvenir shops</span></button><div class="more"><div><p>Soft rice-flour dumplings tied to the Momotaro folk tale. Easy to carry on the train.</p></div></div></div>
-    <div class="spot"><button class="place" aria-expanded="false"><span class="placeName">Mamakari</span><span class="placeDesc">Seto Inland Sea coast</span></button><div class="more"><div><p>A small local fish, often pickled and pressed into sushi. A taste you will not find in Tokyo.</p></div></div></div>
-  </div>
-</section>
-
-<section class="statement"><h2>Don't just eat. <em>Let the season choose.</em></h2></section>
-
-<section class="ways" style="padding-top:15vh">
-  <div class="waysTop"><h2>Keep exploring.</h2></div>
-  <div class="tiles two"><a class="tile nature" href="#nature"><img src="assets/images/gallery-5.jpg" alt="" loading="lazy" decoding="async"><b>Nature</b><div><p>Islands and highland.</p><u>Explore nature</u></div></a><a class="tile culture" href="#culture"><img src="assets/IMG_7048.jpg" alt="" loading="lazy" decoding="async"><b>Culture</b><div><p>Castles, kilns and denim.</p><u>Explore culture</u></div></a></div>
-</section>
-</main>
-<div class="footerline"><span>Visit Okayama</span><span>Japan, 2026</span></div>
-</div>
-<div class="view cat nature" id="view-nature" hidden><header class="hero">
-  <img class="heroimg" src="assets/images/gallery-5.jpg" alt="" fetchpriority="high" decoding="async">
-  <div class="heroCopy">
-    <div class="eyebrow">Okayama, western Japan</div>
-    <h1><span><i>Nature</i></span></h1>
-  </div>
-  <div class="heroMeta"><a href="#ways">Back to Okayama</a><span class="scroll"><b></b>Scroll to explore</span></div>
-</header>
-
-<main>
-<section class="feature" style="padding-top:18vh">
-  <div class="featureHead"><h2>Nature in Okayama</h2><p>Hills above the sea, quiet islands and open highland. All of it is within a day trip of the main cities.</p></div>
-  <div class="frame"><img data-par src="assets/IMG_6962.JPG" alt="" loading="lazy" decoding="async"></div>
-  <div class="caption"><span>Coast, island, highland</span><span>34°39′N 133°55′E</span></div>
-</section>
-
-<section class="places" style="padding-top:2vh">
-  <div class="placesTop"><h2>Where to go.</h2><p>Tap a place to read more.</p></div>
-  <div class="placeList">
-    <div class="spot"><button class="place" aria-expanded="false"><span class="placeName">Hiruzen Highland</span><span class="placeDesc">Maniwa, northern Okayama</span></button><div class="more"><div><p>Wide pastures and dairy cows under the mountains. Cool in summer, good for a long walk.</p></div></div></div>
-    <div class="spot"><button class="place" aria-expanded="false"><span class="placeName">Washuzan</span><span class="placeDesc">Kurashiki</span></button><div class="more"><div><p>A hill with a wide view over the islands and the Seto-Ohashi Bridge. Best near sunset.</p></div></div></div>
-    <div class="spot"><button class="place" aria-expanded="false"><span class="placeName">Ushimado</span><span class="placeDesc">Setouchi city</span></button><div class="more"><div><p>A sunny coastal town with an olive park, often compared to the Mediterranean.</p></div></div></div>
-    <div class="spot"><button class="place" aria-expanded="false"><span class="placeName">Shiraishi Island</span><span class="placeDesc">Kasaoka Islands</span></button><div class="more"><div><p>A small, slow island reached by ferry. Walk or cycle and take your time.</p></div></div></div>
-    <div class="spot"><button class="place" aria-expanded="false"><span class="placeName">Okayama Korakuen</span><span class="placeDesc">Okayama City</span></button><div class="more"><div><p>A landscaped garden of lawns, ponds and trees beside the river. Calm in every season.</p></div></div></div>
-  </div>
-</section>
-
-<section class="statement"><h2>Don't just look. <em>Wa
+<script src="script.js" defer></script>
+</body>
+</html>
