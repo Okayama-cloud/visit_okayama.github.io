@@ -179,3 +179,5 @@ button.place{width:100%;background:none;border:0;border-bottom:0;font:inherit;co
 
 /* Larger tap targets for the nav on phones */
 @media(max-width:700px){.navlinks{gap:12px;font-size:12px}.navlinks a{padding:16px 4px}.brand{font-size:14px}}
+
+.placeName .ja{font:400 .55em/1 "Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;font-style:normal;color:var(--muted);margin-left:.2em;white-space:nowrap}
