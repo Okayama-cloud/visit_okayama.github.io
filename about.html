@@ -64,6 +64,14 @@
 </section>
 </main>
 <div class="footerline"><span>Visit Okayama</span><a class="ig igicon" href="https://www.instagram.com/jonasmaeek/" target="_blank" rel="noopener" aria-label="Instagram (opens in a new tab)"><img src="assets/instagram.png" alt="" width="24" height="24" loading="lazy"></a><span>Japan, 2026</span></div>
+<script data-mail-inline>
+(function(){
+  var a=document.querySelector('.mail[data-u]');
+  if(!a)return;
+  var m=a.getAttribute('data-u')+'@'+a.getAttribute('data-d');
+  a.href='mailto:'+m;a.removeAttribute('target');a.removeAttribute('rel');a.textContent=m;
+})();
+</script>
 <script src="script.js" defer></script>
 </body>
 </html>
