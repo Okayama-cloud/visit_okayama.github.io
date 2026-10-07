@@ -183,3 +183,6 @@ button.place{width:100%;background:none;border:0;border-bottom:0;font:inherit;co
 .placeName .ja{font:400 .55em/1 "Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;font-style:normal;color:var(--muted);margin-left:.2em;white-space:nowrap}
 
 .copy{margin:0;padding:18px 4vw 30px;text-align:center;font-size:12px;color:var(--muted)}
+
+.pano{padding:0 0 18vh}
+.pano img{display:block;width:100%;height:auto;min-height:34vh;object-fit:cover}
